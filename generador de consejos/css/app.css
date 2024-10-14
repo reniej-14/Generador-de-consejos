@@ -1,0 +1,102 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root {
+    /* Texto */
+    --textoPrincipal: hsl(193, 38%, 86%);
+    --textoSecundario: hsl(150, 100%, 66%);
+
+    /* Fondo */
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    background-color: var(--DarkBlue);
+}
+
+.contenedor {
+    background-color: var(--DarkGrayishBlue);
+    width: 94%;
+    margin: 0 auto;
+    padding: 5rem 5rem 4rem 5rem;
+    margin-top: 20rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+@media (min-width: 720px) { 
+    .contenedor {
+        max-width: 55rem;
+    }
+}
+
+.consejo__indice,
+.consejo__texto {
+    margin: 0;
+    text-align: center;
+}
+
+.consejo__indice {
+    color: var(--textoSecundario);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: .5rem;
+}
+
+.consejo__texto {
+    color: var(--textoPrincipal);
+    line-height: 1.3;
+}
+
+.separador {
+    height: 2rem;
+    margin: 3rem 0;
+    background-image: url('../images/pattern-divider-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+@media (min-width: 720px) { 
+    .separador {
+        background-image: url('../images/pattern-divider-desktop.svg');
+    }
+}
+
+.btn {
+    background-color: var(--textoSecundario);
+    text-align: center;
+    padding: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    bottom: -3.5rem;
+    right: 41%;
+    transition-property: background-color, transform;
+    transition-duration: .3s;
+}
+@media (min-width: 560px) { 
+    .btn {
+        right: 43%;
+    }
+}
+.btn:hover {
+    background-color: var(--textoPrincipal);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.btn__img {
+    width: 3rem;
+}
